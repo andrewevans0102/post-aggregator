@@ -1,0 +1,40 @@
+.create-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.show-item{
+  margin: 2em;
+  border-style: solid;
+  border-color: lightblue;
+  border-width: 0.5em;
+}
+
+img{
+  width: 10em;
+  height: 10em;
+}
+
+.feed-name {
+  max-width: 12em;
+  min-width: 12em;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+button {
+  width: 20em;
+}
+
+.output-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.btn-danger {
+  width: 2em;
+}

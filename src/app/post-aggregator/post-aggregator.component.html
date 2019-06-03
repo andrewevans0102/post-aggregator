@@ -1,0 +1,46 @@
+<div class="jumbotron">
+    <h1 class="display-4">Post Aggregator</h1>
+    <p class="lead">Retrieve all your blog posts in one call!</p>
+  </div>
+  <div class="container">
+    <div class="row create-item">
+      <div class="col-sm">
+        <form #todoForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="URL" required [(ngModel)]="sourceURL" name="sourceURLInputControl">
+              <br />
+              <small id="itemHelp" class="form-text text-muted">Click the button below to add a RSS feed URL to the endpoints called.  Once you're done, click the "Output Posts" button below to see the Post Aggregator in action!</small>
+              <small class="form-text text-muted">Example: <a href="https://medium.com/feed/@Medium">https://medium.com/feed/@Medium</a></small>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!todoForm.form.valid">Add URL</button>
+          </form>
+      </div>
+      <div class="col-sm">
+        <img src="../assets/header_image.png">
+      </div>
+    </div>
+    <div class="row show-item">
+      <div class="col-sm">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Post Feeds</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of items">
+            <tr>
+              <td class="feed-name">{{ item.sourceURL }}</td>
+              <td><button class="btn btn-danger" (click)="deleteItem(item)">X</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <div class="output-button">
+          <button class="btn btn-success" (click)="outputPosts()">Output Posts</button>
+        </div>
+      </div>
+    </div>
+  </div>
