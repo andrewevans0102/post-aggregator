@@ -42,17 +42,20 @@ function formatDate(input) {
 function callRSS(input, output) {
   return parser.parseURL(input.sourceURL).then((feedOutput) => {
     feedOutput.items.forEach(item => {
-      const publishDate = formatDate(item.pubDate);
-      const outputItem = {
-          sourceURL: input.sourceURL,
-          creator: item.creator,
-          title: item.title,
-          link: item.link,
-          pubDate: publishDate,
-          contentSnippet: item.contentSnippet,
-          categories: item.categories
-      };
-      output.push(outputItem);
+      // when categories is undefined that is normally a comment or other type of post
+      if(item.categories !== undefined) {
+        const publishDate = formatDate(item.pubDate);
+        const outputItem = {
+            sourceURL: input.sourceURL,
+            creator: item.creator,
+            title: item.title,
+            link: item.link,
+            pubDate: publishDate,
+            contentSnippet: item.contentSnippet,
+            categories: item.categories
+        };
+        output.push(outputItem);
+      }
     });
   });
 }
