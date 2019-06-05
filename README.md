@@ -30,7 +30,15 @@ Here's an example code using the Angular HTTPClient:
 // items following a structure of id and sourceURL as shown above
 const items = [];
 const postBody = new PostBody();
+
+const exampleItem = {
+  id: '0',
+  sourceURL: 'https://blog.angularindepth.com/feed'
+};
+
+items.push(exampleItem);
 postBody.input = this.items;
+
 return this.http.post<Result>(environment.functionURL, postBody);
 ```
 
