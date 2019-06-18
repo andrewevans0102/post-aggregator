@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod-build": "ng build --prod"
+    "prod-build": "ng build --prod",
+    "functions-deploy": "cd functions; npm run deploy",
+    "functions-install": "cd functions; npm install"
   },
   "private": true,
   "dependencies": {
