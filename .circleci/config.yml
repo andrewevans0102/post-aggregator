@@ -16,15 +16,15 @@ jobs:
                 keys:
                     - v1-dependencies-{{ checksum "package.json" }}
             - run:
-                name: Install dependencies
-                command: npm run frontend-install
+                name: install dependencies
+                command: npm install
             - save_cache:
                 key: v1-dependencies-{{ checksum "package.json" }}
                 paths:
                     - frontend/node_modules
             - run:
-                name: Building
-                command: npm run frontend-build
+                name: build project
+                command: npm run prod-build
             - save_cache:
                 key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
                 paths:
