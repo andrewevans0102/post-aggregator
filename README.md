@@ -62,7 +62,7 @@ The fields that are returned correspond to the RSS standard and the fields that 
 
 ## Client Application
 
-I also created a client application that lets you interact with a GUI to showcase the Firebase Cloud Function.  Just [go to the hosted url here](https://post-aggregator-bf853.firebaseapp.com/post-aggregator).  Then add a RSS endpoint and when you click "output posts" it calls the Firebase Cloud Function and returns the result formatted (parsed from the JSON).
+I also created a client application that lets you interact with a GUI to showcase the Firebase Cloud Function.  Just [go to the hosted url here](https://post-aggregator-bf853.firebaseapp.com).  Then add a RSS endpoint and when you click "output posts" it calls the Firebase Cloud Function and returns the result formatted (parsed from the JSON).
 
 ## Projet Folders
 - The main project is just the client application
