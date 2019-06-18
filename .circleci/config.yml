@@ -28,7 +28,7 @@ jobs:
             - save_cache:
                 key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
                 paths:
-                    - frontend
+                    - dist
                     - functions
                     - package.json
                     - .firebaserc
