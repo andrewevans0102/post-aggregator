@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prod-build": "ng build --prod",
+    "prod-deploy": "firebase deploy",
     "functions-deploy": "cd functions; npm run deploy",
     "functions-install": "cd functions; npm install"
   },
