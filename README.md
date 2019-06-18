@@ -5,7 +5,7 @@ This project creates a Firebase Cloud Function that aggregates blog posts from m
 The project uses the [rss-parser npm package](https://www.npmjs.com/package/rss-parser)
 
 In order to use this Firebase Cloud Function in your project you just need to make a POST call to the following endpoint:
-[https://us-central1-post-aggregator-805d8.cloudfunctions.net/app/post-aggregator](https://us-central1-post-aggregator-805d8.cloudfunctions.net/app/post-aggregator)
+[https://us-central1-post-aggregator-bf853.cloudfunctions.net/app/post-aggregator](https://us-central1-post-aggregator-bf853.cloudfunctions.net/app/post-aggregator)
 
 The POST body structure needs to provide an array of itmes like so
 

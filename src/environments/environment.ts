@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  functionURL: 'http://localhost:5000/post-aggregator-805d8/us-central1/app/post-aggregator'
+  functionURL: 'https://us-central1-post-aggregator-bf853.cloudfunctions.net/app/post-aggregator'
 };
 
 /*
